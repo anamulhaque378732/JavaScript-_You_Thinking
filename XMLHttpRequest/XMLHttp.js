@@ -19,7 +19,7 @@ const sendRequest = (method, url, data) => {
                 reject(xhr.response)
             } else {
                 resolve(xhr.response);
-            }
+            };
 
         };
 
@@ -34,10 +34,7 @@ const getData = () => {
     sendRequest("GET", "https://jsonplaceholder.typicode.com/todos/1")
         .then((responseData) => {
             console.log(responseData);
-        })
-
-
-
+        });
 };
 
 const sendData = () => {
@@ -51,10 +48,7 @@ const sendData = () => {
         }).catch(err => {
             console.log(err);
 
-        })
-
-
-
+        });
 };
 
 
