@@ -9,8 +9,6 @@ function copyToClipBoard(str) {
     document.execCommand("copy");
     document.body.removeChild(element);
 
-
-
 };
 
 
@@ -20,8 +18,12 @@ function handleClick() {
 
     copyToClipBoard(text.innerText);
 
-
 };
+
+const number = document.querySelector("#number").valueAsNumber;
+
+//console.log( number);
+
 
 
 
