@@ -1,5 +1,5 @@
 function add(...x) {
-    console.log(x);
+    //console.log(x);
 
     return x.reduce((sum, current) => sum + current)
 };
@@ -13,13 +13,12 @@ const memo = (func) => {
     const cache = {};
     return function (...x) {
         const key = JSON.stringify(x);
-        console.log(key);
+        //console.log(key);
 
         if (cache[key]) {
-
             return cache[key];
-        } else {
 
+        } else {
             const result = func(...x);
             cache[key] = result;
             return result;
@@ -29,7 +28,7 @@ const memo = (func) => {
 
 
 const calculate = memo(add);
-console.log(calculate(10, 20, 30, 40));
+//console.log(calculate(10, 20, 30, 40));
 // console.log(calculate(10));
 // console.log(calculate(10));
 

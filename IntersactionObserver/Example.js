@@ -1,6 +1,5 @@
 const squares = document.querySelectorAll('div');
 
-
 const observer = new IntersectionObserver((squares) => {
     squares.forEach(square => {
         if (square.isIntersecting) {
@@ -11,7 +10,7 @@ const observer = new IntersectionObserver((squares) => {
         }
     })
 }, {
-    threshold: 0.5
+    threshold: 0.5,
 });
 
 squares.forEach(square => observer.observe(square));
